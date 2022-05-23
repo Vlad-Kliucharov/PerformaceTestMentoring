@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="VUSERS" elementType="Argument">
             <stringProp name="Argument.name">VUSERS</stringProp>
-            <stringProp name="Argument.value">${__P(VUsers,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(VUsers,3)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RAMPUP" elementType="Argument">
@@ -63,7 +63,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="POSTQUANTITY" elementType="Argument">
             <stringProp name="Argument.name">POSTQUANTITY</stringProp>
-            <stringProp name="Argument.value">120</stringProp>
+            <stringProp name="Argument.value">15</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -127,7 +127,7 @@
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">blog/Account/login.aspx</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -282,7 +282,7 @@
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">blog/admin/app/editor/editpost.cshtml</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -315,7 +315,7 @@
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">blog/api/lookups</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -395,48 +395,42 @@
             <stringProp name="LoopController.loops">${POSTQUANTITY}</stringProp>
           </LoopController>
           <hashTree>
-            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV_Dates" enabled="false">
-              <stringProp name="delimiter">,</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="filename">Dates.csv</stringProp>
-              <boolProp name="ignoreFirstLine">true</boolProp>
-              <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">true</boolProp>
-              <stringProp name="shareMode">shareMode.all</stringProp>
-              <boolProp name="stopThread">false</boolProp>
-              <stringProp name="variableNames">Dates</stringProp>
-            </CSVDataSet>
-            <hashTree/>
-            <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
-              <stringProp name="filename">C:\Users\Administrator\Documents\PerformaceTestMentoring\Task2\Dates.csv</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="delimiter">,</stringProp>
-              <stringProp name="variableNames">Dates</stringProp>
-              <boolProp name="randomOrder">true</boolProp>
-              <boolProp name="ignoreFirstLine">true</boolProp>
-              <boolProp name="rewindOnTheEndOfList">true</boolProp>
-              <boolProp name="independentListPerThread">false</boolProp>
-            </com.blazemeter.jmeter.RandomCSVDataSetConfig>
-            <hashTree/>
-            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-              <stringProp name="CounterConfig.start">1</stringProp>
-              <stringProp name="CounterConfig.end"></stringProp>
-              <stringProp name="CounterConfig.incr">1</stringProp>
-              <stringProp name="CounterConfig.name">Counter_Value</stringProp>
-              <stringProp name="CounterConfig.format"></stringProp>
-              <boolProp name="CounterConfig.per_user">true</boolProp>
-            </CounterConfig>
-            <hashTree/>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">300</stringProp>
-              <stringProp name="RandomTimer.range">200.0</stringProp>
-            </GaussianRandomTimer>
-            <hashTree/>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If_CSV_Dates" enabled="true">
-              <stringProp name="IfController.condition">${__javaScript(parseInt(vars.get(&quot;Counter_Value&quot;)) &lt; 100)}</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">0</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <stringProp name="ThroughputController.maxThroughput">${POSTQUANTITY}</stringProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>33.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
             <hashTree>
+              <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
+                <stringProp name="filename">Dates.csv</stringProp>
+                <stringProp name="fileEncoding">UTF-8</stringProp>
+                <stringProp name="delimiter">,</stringProp>
+                <stringProp name="variableNames">Dates</stringProp>
+                <boolProp name="randomOrder">true</boolProp>
+                <boolProp name="ignoreFirstLine">true</boolProp>
+                <boolProp name="rewindOnTheEndOfList">true</boolProp>
+                <boolProp name="independentListPerThread">false</boolProp>
+              </com.blazemeter.jmeter.RandomCSVDataSetConfig>
+              <hashTree/>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end"></stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">Counter_Value</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">300</stringProp>
+                <stringProp name="RandomTimer.range">200.0</stringProp>
+              </GaussianRandomTimer>
+              <hashTree/>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Posts_Dates" enabled="true">
                 <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -448,7 +442,7 @@
     &quot;Title&quot;: &quot;Test${__RandomString(5,12345)}&quot;,&#xd;
     &quot;Author&quot;: &quot;TestEditor&quot;,&#xd;
     &quot;Content&quot;: &quot;&lt;p&gt;${__RandomString(${__Random(50,1000,)},qwertyuiopasdfghjklzxcvbnm,)}&lt;/p&gt;&quot;,&#xd;
-    &quot;DateCreated&quot;: &quot;${Dates}&quot;,&#xd;
+    &quot;DateCreated&quot;: &quot;${valueDate}&quot;,&#xd;
     &quot;Slug&quot;: &quot;test&quot;,&#xd;
     &quot;Categories&quot;: [],&#xd;
     &quot;Tags&quot;: [],&#xd;
@@ -462,7 +456,7 @@
                 </elementProp>
                 <stringProp name="HTTPSampler.domain"></stringProp>
                 <stringProp name="HTTPSampler.port"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding"></stringProp>
                 <stringProp name="HTTPSampler.path">blog/api/posts</stringProp>
                 <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -491,6 +485,20 @@
                     </elementProp>
                   </collectionProp>
                 </HeaderManager>
+                <hashTree/>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters">${__RandomDate(yyyy-MM-dd,2022-03-08,2022-05-08,,)} ${__time(hh:mm,)}</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">String valueDate = new String()
+if(vars.get(&quot;Counter_Value&quot;).toInteger() &lt; 100){
+	valueDate = vars.get(&apos;Dates&apos;)
+}else{
+	valueDate = Parameters
+	}
+vars.put(&apos;valueDate&apos;, valueDate)</stringProp>
+                </JSR223PreProcessor>
                 <hashTree/>
               </hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PUT_Custom_Fields_Dates" enabled="true">
@@ -506,113 +514,7 @@
                 </elementProp>
                 <stringProp name="HTTPSampler.domain"></stringProp>
                 <stringProp name="HTTPSampler.port"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
-                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-                <stringProp name="HTTPSampler.path">blog/api/customfields</stringProp>
-                <stringProp name="HTTPSampler.method">PUT</stringProp>
-                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-                <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              </HTTPSamplerProxy>
-              <hashTree>
-                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-                  <collectionProp name="HeaderManager.headers">
-                    <elementProp name="Accept" elementType="Header">
-                      <stringProp name="Header.name">Accept</stringProp>
-                      <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
-                    </elementProp>
-                    <elementProp name="Content-Type" elementType="Header">
-                      <stringProp name="Header.name">Content-Type</stringProp>
-                      <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                    </elementProp>
-                    <elementProp name="x-blog-instance" elementType="Header">
-                      <stringProp name="Header.name">x-blog-instance</stringProp>
-                      <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
-                    </elementProp>
-                  </collectionProp>
-                </HeaderManager>
-                <hashTree/>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If_CSV_RandomDates" enabled="true">
-              <stringProp name="IfController.condition">${__javaScript(parseInt(vars.get(&quot;Counter_Value&quot;)) &gt; 100)}</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Posts_RandomDates" enabled="true">
-                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-                  <collectionProp name="Arguments.arguments">
-                    <elementProp name="" elementType="HTTPArgument">
-                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                      <stringProp name="Argument.value">{&#xd;
-    &quot;Id&quot;: &quot;&quot;,&#xd;
-    &quot;Title&quot;: &quot;Test${__RandomString(5,12345)}&quot;,&#xd;
-    &quot;Author&quot;: &quot;TestEditor&quot;,&#xd;
-    &quot;Content&quot;: &quot;&lt;p&gt;${__RandomString(${__Random(50,1000,)},qwertyuiopasdfghjklzxcvbnm,)}&lt;/p&gt;&quot;,&#xd;
-    &quot;DateCreated&quot;: &quot;${__RandomDate(yyyy-MM-dd,2022-04-01,2022-07-08,,)} ${__time(hh:mm,)}&quot;,&#xd;
-    &quot;Slug&quot;: &quot;test&quot;,&#xd;
-    &quot;Categories&quot;: [],&#xd;
-    &quot;Tags&quot;: [],&#xd;
-    &quot;Comments&quot;: &quot;&quot;,&#xd;
-    &quot;HasCommentsEnabled&quot;: true,&#xd;
-    &quot;IsPublished&quot;: true&#xd;
-}</stringProp>
-                      <stringProp name="Argument.metadata">=</stringProp>
-                    </elementProp>
-                  </collectionProp>
-                </elementProp>
-                <stringProp name="HTTPSampler.domain"></stringProp>
-                <stringProp name="HTTPSampler.port"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
-                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-                <stringProp name="HTTPSampler.path">blog/api/posts</stringProp>
-                <stringProp name="HTTPSampler.method">POST</stringProp>
-                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-                <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              </HTTPSamplerProxy>
-              <hashTree>
-                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-                  <collectionProp name="HeaderManager.headers">
-                    <elementProp name="Accept" elementType="Header">
-                      <stringProp name="Header.name">Accept</stringProp>
-                      <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
-                    </elementProp>
-                    <elementProp name="Content-Type" elementType="Header">
-                      <stringProp name="Header.name">Content-Type</stringProp>
-                      <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                    </elementProp>
-                    <elementProp name="x-blog-instance" elementType="Header">
-                      <stringProp name="Header.name">x-blog-instance</stringProp>
-                      <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
-                    </elementProp>
-                  </collectionProp>
-                </HeaderManager>
-                <hashTree/>
-              </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PUT_Custom_Fields_RandomDates" enabled="true">
-                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-                  <collectionProp name="Arguments.arguments">
-                    <elementProp name="" elementType="HTTPArgument">
-                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                      <stringProp name="Argument.value">[]</stringProp>
-                      <stringProp name="Argument.metadata">=</stringProp>
-                    </elementProp>
-                  </collectionProp>
-                </elementProp>
-                <stringProp name="HTTPSampler.domain"></stringProp>
-                <stringProp name="HTTPSampler.port"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding"></stringProp>
                 <stringProp name="HTTPSampler.path">blog/api/customfields</stringProp>
                 <stringProp name="HTTPSampler.method">PUT</stringProp>

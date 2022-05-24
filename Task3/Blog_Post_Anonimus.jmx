@@ -37,66 +37,6 @@
             <stringProp name="Argument.value">${__P(Protocol,http)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="VUSERS" elementType="Argument">
-            <stringProp name="Argument.name">VUSERS</stringProp>
-            <stringProp name="Argument.value">${__P(VUsers,50)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="RAMPUP" elementType="Argument">
-            <stringProp name="Argument.name">RAMPUP</stringProp>
-            <stringProp name="Argument.value">${__P(RampUp,100)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="LOOPCOUNT" elementType="Argument">
-            <stringProp name="Argument.name">LOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount, 1)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="DURATION" elementType="Argument">
-            <stringProp name="Argument.name">DURATION</stringProp>
-            <stringProp name="Argument.value">${__P(Duration,10)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="URL" elementType="Argument">
-            <stringProp name="Argument.name">URL</stringProp>
-            <stringProp name="Argument.value">${__P(URL,192.168.0.188)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="PROTOCOL" elementType="Argument">
-            <stringProp name="Argument.name">PROTOCOL</stringProp>
-            <stringProp name="Argument.value">${__P(Protocol,http)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="VUSERS" elementType="Argument">
-            <stringProp name="Argument.name">VUSERS</stringProp>
-            <stringProp name="Argument.value">${__P(VUsers,50)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="RAMPUP" elementType="Argument">
-            <stringProp name="Argument.name">RAMPUP</stringProp>
-            <stringProp name="Argument.value">${__P(RampUp,100)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="LOOPCOUNT" elementType="Argument">
-            <stringProp name="Argument.name">LOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount, 1)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="DURATION" elementType="Argument">
-            <stringProp name="Argument.name">DURATION</stringProp>
-            <stringProp name="Argument.value">${__P(Duration,10)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="URL" elementType="Argument">
-            <stringProp name="Argument.name">URL</stringProp>
-            <stringProp name="Argument.value">${__P(URL,192.168.0.188)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="PROTOCOL" elementType="Argument">
-            <stringProp name="Argument.name">PROTOCOL</stringProp>
-            <stringProp name="Argument.value">${__P(Protocol,http)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>

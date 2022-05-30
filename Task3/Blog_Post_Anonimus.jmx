@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan (Task 3)" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan(Task 3)" enabled="true">
       <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -120,7 +120,7 @@
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">120</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </SetupThreadGroup>
       <hashTree>
@@ -262,43 +262,6 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <url>true</url>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename"></stringProp>
-        </ResultCollector>
-        <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -310,7 +273,7 @@
         <stringProp name="ThreadGroup.ramp_time">${RAMPUP}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -419,49 +382,22 @@
                     <stringProp name="RegexExtractor.match_number">0</stringProp>
                   </RegexExtractor>
                   <hashTree/>
-                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="DateRandomExtractor" enabled="true">
-                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                    <stringProp name="RegexExtractor.refname">RandomDate</stringProp>
-                    <stringProp name="RegexExtractor.regex">&quot;\/blog\/(\d+\/\d+\/\d+)</stringProp>
-                    <stringProp name="RegexExtractor.template">$1$</stringProp>
-                    <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                    <stringProp name="RegexExtractor.match_number">0</stringProp>
-                  </RegexExtractor>
-                  <hashTree/>
-                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
-                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                    <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-                    <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
-                    <stringProp name="RegexExtractor.template">$1$</stringProp>
-                    <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                    <stringProp name="RegexExtractor.match_number">0</stringProp>
-                  </RegexExtractor>
-                  <hashTree/>
-                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPagetExtractor" enabled="true">
-                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                    <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                    <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
-                    <stringProp name="RegexExtractor.template">$1$</stringProp>
-                    <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                    <stringProp name="RegexExtractor.match_number">1</stringProp>
-                  </RegexExtractor>
-                  <hashTree/>
                 </hashTree>
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
-                    <stringProp name="-174115029">If Controller (Pagination On)</stringProp>
+                    <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Open Random Post)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
-                    <stringProp name="-530478165">Open Post(Random OR First)</stringProp>
+                    <stringProp name="255127527">If Controller (Search Value Found)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
@@ -519,16 +455,16 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
-                  <stringProp name="-174115029">If Controller (Pagination On)</stringProp>
+                  <stringProp name="-484072516">If Controller (Pagination On (Random Date) </stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="-530478165">Open Post(Random OR First)</stringProp>
                 </collectionProp>
@@ -570,16 +506,16 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
-                  <stringProp name="-174115029">If Controller (Pagination On)</stringProp>
+                  <stringProp name="-484072516">If Controller (Pagination On (Random Date) </stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open_Post_(Random OR First)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="-530478165">Open Post(Random OR First)</stringProp>
                 </collectionProp>
@@ -655,7 +591,7 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Search Value Found)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="255127527">If Controller (Search Value Found)</stringProp>
                 </collectionProp>
@@ -800,7 +736,7 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Search Value Found)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="255127527">If Controller (Search Value Found)</stringProp>
                 </collectionProp>
@@ -832,7 +768,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -1104,62 +1040,61 @@
       <hashTree/>
       <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="jp@gc - Console Status Logger" enabled="true"/>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
-        <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-          <collectionProp name="Arguments.arguments">
-            <elementProp name="influxdbMetricsSender" elementType="Argument">
-              <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
-              <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="influxdbUrl" elementType="Argument">
-              <stringProp name="Argument.name">influxdbUrl</stringProp>
-              <stringProp name="Argument.value">http://192.168.0.181:8086/write?db=task3</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="application" elementType="Argument">
-              <stringProp name="Argument.name">application</stringProp>
-              <stringProp name="Argument.value">application</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="measurement" elementType="Argument">
-              <stringProp name="Argument.name">measurement</stringProp>
-              <stringProp name="Argument.value">jmeter</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="summaryOnly" elementType="Argument">
-              <stringProp name="Argument.name">summaryOnly</stringProp>
-              <stringProp name="Argument.value">true</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="samplersRegex" elementType="Argument">
-              <stringProp name="Argument.name">samplersRegex</stringProp>
-              <stringProp name="Argument.value">.*</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="percentiles" elementType="Argument">
-              <stringProp name="Argument.name">percentiles</stringProp>
-              <stringProp name="Argument.value">90;95;99</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="testTitle" elementType="Argument">
-              <stringProp name="Argument.name">testTitle</stringProp>
-              <stringProp name="Argument.value">Test name</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="eventTags" elementType="Argument">
-              <stringProp name="Argument.name">eventTags</stringProp>
-              <stringProp name="Argument.value"></stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-          </collectionProp>
-        </elementProp>
-        <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-      </BackendListener>
-      <hashTree/>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="true"/>
       <hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (Pagination On)" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (Pagination On (Home Page) " enabled="true">
+          <stringProp name="IfController.condition">${__groovy(vars.get(&quot;RandomPage&quot;) as int &gt;= 1 )}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_Random_Page" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">page</stringProp>
+                  <stringProp name="Argument.value">${RandomPage}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">blog/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostsExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
+              <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (Pagination On (Random Date) " enabled="true">
           <stringProp name="IfController.condition">${__groovy(vars.get(&quot;RandomPage&quot;) as int &gt;= 1 )}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
@@ -1191,10 +1126,10 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPagetExtractor" enabled="true">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostsExtractor" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-              <stringProp name="RegexExtractor.refname">RandomPage</stringProp>
-              <stringProp name="RegexExtractor.regex">page=(\d{1,2})</stringProp>
+              <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
               <stringProp name="RegexExtractor.match_number">0</stringProp>
@@ -1207,15 +1142,6 @@
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
               <stringProp name="RegexExtractor.match_number">1</stringProp>
-            </RegexExtractor>
-            <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
-              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-              <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
-              <stringProp name="RegexExtractor.template">$1$</stringProp>
-              <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-              <stringProp name="RegexExtractor.match_number">0</stringProp>
             </RegexExtractor>
             <hashTree/>
           </hashTree>
@@ -1302,20 +1228,11 @@
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
-                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                  <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
-                  <stringProp name="RegexExtractor.template">$1$</stringProp>
-                  <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">0</stringProp>
-                </RegexExtractor>
-                <hashTree/>
               </hashTree>
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (LastSample Ok)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="-208579494">If Controller (Last Sample Ok)</stringProp>
                 </collectionProp>
@@ -1395,20 +1312,11 @@
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPagetExtractor" enabled="true">
-                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                  <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
-                  <stringProp name="RegexExtractor.template">$1$</stringProp>
-                  <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">1</stringProp>
-                </RegexExtractor>
-                <hashTree/>
               </hashTree>
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (LastSampleOk)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                  <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="-208579494">If Controller (Last Sample Ok)</stringProp>
                 </collectionProp>
@@ -1617,20 +1525,11 @@
                 <stringProp name="RegexExtractor.match_number">1</stringProp>
               </RegexExtractor>
               <hashTree/>
-              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
-                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-                <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
-                <stringProp name="RegexExtractor.template">$1$</stringProp>
-                <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                <stringProp name="RegexExtractor.match_number">0</stringProp>
-              </RegexExtractor>
-              <hashTree/>
             </hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (LastSample Ok)" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                 <stringProp name="170071582">Test Fragment</stringProp>
                 <stringProp name="-208579494">If Controller (Last Sample Ok)</stringProp>
               </collectionProp>
@@ -1710,20 +1609,11 @@
                 <stringProp name="RegexExtractor.match_number">1</stringProp>
               </RegexExtractor>
               <hashTree/>
-              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPostExtractor" enabled="true">
-                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
-                <stringProp name="RegexExtractor.template">$1$</stringProp>
-                <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                <stringProp name="RegexExtractor.match_number">1</stringProp>
-              </RegexExtractor>
-              <hashTree/>
             </hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (LastSampleOk)" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="1616763314">Test plan (Task 3)</stringProp>
+                <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                 <stringProp name="170071582">Test Fragment</stringProp>
                 <stringProp name="-208579494">If Controller (Last Sample Ok)</stringProp>
               </collectionProp>

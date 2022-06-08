@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="LOOPCOUNT" elementType="Argument">
             <stringProp name="Argument.name">LOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount, 1)}</stringProp>
+            <stringProp name="Argument.value">${__P(LoopCount, 10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="DURATION" elementType="Argument">
@@ -29,7 +29,7 @@
           </elementProp>
           <elementProp name="URL" elementType="Argument">
             <stringProp name="Argument.name">URL</stringProp>
-            <stringProp name="Argument.value">${__P(URL,192.168.0.187)}</stringProp>
+            <stringProp name="Argument.value">${__P(URL,192.168.0.201)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PROTOCOL" elementType="Argument">
@@ -116,7 +116,10 @@
       <hashTree/>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="true"/>
       <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller (Delete User)" enabled="true"/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Simple Controller (Delete User)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PUT_Users_Processchecked_Delete" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -253,7 +256,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller (Add User)" enabled="true"/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Simple Controller (Add User)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Userroles_Fakeusername" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -373,7 +379,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group (Warm UP)" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -839,13 +845,6 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="GetUserNameListExtractor" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">GetUserNameList</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$..UserName</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">VALUE NOT FOUND</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Account_Logoff" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -873,14 +872,7 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="RandomTimer.range">0.0</stringProp>
-            <stringProp name="ConstantTimer.delay">0</stringProp>
-            <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -906,7 +898,7 @@
         </CounterConfig>
         <hashTree/>
         <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">2000</stringProp>
+          <stringProp name="ConstantTimer.delay">500</stringProp>
           <stringProp name="RandomTimer.range">1000.0</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
@@ -943,7 +935,10 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller (Login)" enabled="true"/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Login)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Account_Login" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -1103,7 +1098,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Admin Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Security_Profile" enabled="true">
@@ -1171,7 +1166,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Profile Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Users_Admin" enabled="true">
@@ -1251,7 +1246,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open User Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Security_UserView.html" enabled="true">
@@ -1356,6 +1351,7 @@
           <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (&gt; 20 users)" enabled="true">
             <stringProp name="IfController.condition">${__groovy(vars.get(&quot;GetUserNameList_matchNr&quot;) as int &gt; 20)}</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
           </IfController>
           <hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Delete User)  " enabled="true">
@@ -1363,7 +1359,7 @@
                 <stringProp name="764597751">Test Plan</stringProp>
                 <stringProp name="1160532921">Test plan (Task4)</stringProp>
                 <stringProp name="170071582">Test Fragment</stringProp>
-                <stringProp name="-1268261188">Delete User Controller</stringProp>
+                <stringProp name="1623847003">Simple Controller (Delete User)</stringProp>
               </collectionProp>
             </ModuleController>
             <hashTree/>
@@ -1371,6 +1367,7 @@
           <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (&lt; 10 users)" enabled="true">
             <stringProp name="IfController.condition">${__groovy(vars.get(&quot;GetUserNameList_matchNr&quot;) as int &lt; 10)}</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
           </IfController>
           <hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Add User)" enabled="true">
@@ -1383,9 +1380,10 @@
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (&gt; 10 users) || (&lt; 20 users) " enabled="true">
-            <stringProp name="IfController.condition">${__groovy(vars.get(&quot;GetUserNameList_matchNr&quot;) as int &gt; 10)} &amp;&amp; ${__groovy(vars.get(&quot;GetUserNameList_matchNr&quot;) as int &lt; 20)}</stringProp>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (&gt; 10 users) &amp;&amp; (&lt; 20 users) " enabled="true">
+            <stringProp name="IfController.condition">${__groovy(vars.get(&quot;GetUserNameList_matchNr&quot;) as int &gt; 10 &amp;&amp; vars.get(&quot;GetUserNameList_matchNr&quot;) as int &lt; 20)}</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
           </IfController>
           <hashTree>
             <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Random Controller" enabled="true">

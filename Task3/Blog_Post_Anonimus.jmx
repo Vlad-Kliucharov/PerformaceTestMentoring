@@ -91,7 +91,6 @@
         <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
-        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
@@ -667,11 +666,18 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">2000</stringProp>
-          <stringProp name="RandomTimer.range">1000.0</stringProp>
-        </GaussianRandomTimer>
-        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">3000</stringProp>
+            <stringProp name="RandomTimer.range">1000.0</stringProp>
+          </GaussianRandomTimer>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_HomePage" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -739,6 +745,18 @@
           <hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open HomePage" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (Open Home Page OR NOT)" enabled="true">
                 <stringProp name="IfController.condition">${__Random(0,1,)} == 1</stringProp>
                 <boolProp name="IfController.evaluateAll">false</boolProp>
@@ -798,6 +816,7 @@
                     <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1522881174">If Controller Open Post (Random OR First)</stringProp>
+                    <stringProp name="204715191">Open Post (Random OR First)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
@@ -805,6 +824,18 @@
             </hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_Random_Date" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments"/>
@@ -877,12 +908,25 @@
                   <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="1522881174">If Controller Open Post (Random OR First)</stringProp>
+                  <stringProp name="204715191">Open Post (Random OR First)</stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
             </hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
                 <stringProp name="filename">RandomDates.csv</stringProp>
                 <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -939,12 +983,25 @@
                   <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                   <stringProp name="170071582">Test Fragment</stringProp>
                   <stringProp name="1522881174">If Controller Open Post (Random OR First)</stringProp>
+                  <stringProp name="204715191">Open Post (Random OR First)</stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
             </hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Search_Post" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments">
@@ -1037,6 +1094,18 @@
             </hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_Calendar" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments"/>
@@ -1198,6 +1267,18 @@
             </hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="true"/>
             <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">1000.0</stringProp>
+                </GaussianRandomTimer>
+                <hashTree/>
+              </hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_ContactPage" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments"/>

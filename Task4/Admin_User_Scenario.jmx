@@ -1115,23 +1115,23 @@
           <stringProp name="LoopController.loops">${LOOPCOUNTLOGIN}</stringProp>
         </LoopController>
         <hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">3000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
-            </GaussianRandomTimer>
-            <hashTree/>
-          </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Admin Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+                <stringProp name="RandomTimer.range">100.0</stringProp>
+              </GaussianRandomTimer>
+              <hashTree/>
+            </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Security_Profile" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
@@ -1195,23 +1195,23 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">3000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
-            </GaussianRandomTimer>
-            <hashTree/>
-          </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Profile Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+                <stringProp name="RandomTimer.range">100.0</stringProp>
+              </GaussianRandomTimer>
+              <hashTree/>
+            </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_blog/admin/#/security/profile" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
@@ -1355,23 +1355,23 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">3000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
-            </GaussianRandomTimer>
-            <hashTree/>
-          </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open User Page)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+                <stringProp name="RandomTimer.range">100.0</stringProp>
+              </GaussianRandomTimer>
+              <hashTree/>
+            </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Security_UserView.html" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>

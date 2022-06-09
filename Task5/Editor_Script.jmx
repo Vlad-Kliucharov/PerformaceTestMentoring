@@ -73,7 +73,18 @@
       </HeaderManager>
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments"/>
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="CONSTANTDELAY" elementType="Argument">
+            <stringProp name="Argument.name">CONSTANTDELAY</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEVIATION" elementType="Argument">
+            <stringProp name="Argument.name">DEVIATION</stringProp>
+            <stringProp name="Argument.value">500</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
       </Arguments>
       <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
@@ -86,7 +97,6 @@
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
         <boolProp name="HTTPSampler.image_parser">true</boolProp>
-        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout">300000</stringProp>
@@ -637,8 +647,8 @@
           </TestAction>
           <hashTree>
             <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">2000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
+              <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
+              <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
@@ -714,8 +724,8 @@
           </TestAction>
           <hashTree>
             <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">2000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
+              <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
+              <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
@@ -882,8 +892,8 @@
           </TestAction>
           <hashTree>
             <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">2000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
+              <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
+              <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
@@ -1012,8 +1022,8 @@
           </TestAction>
           <hashTree>
             <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">2000</stringProp>
-              <stringProp name="RandomTimer.range">100.0</stringProp>
+              <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
+              <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>

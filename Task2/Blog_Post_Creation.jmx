@@ -68,12 +68,10 @@
           </elementProp>
           <elementProp name="RANDOMSTARTDATE" elementType="Argument">
             <stringProp name="Argument.name">RANDOMSTARTDATE</stringProp>
-            <stringProp name="Argument.value">2022-07-01</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RANDOMENDDATE" elementType="Argument">
             <stringProp name="Argument.name">RANDOMENDDATE</stringProp>
-            <stringProp name="Argument.value">2022-07-30</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>

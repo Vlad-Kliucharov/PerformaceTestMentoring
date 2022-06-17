@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
-      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan (Task 2)" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -68,12 +68,12 @@
           </elementProp>
           <elementProp name="RANDOMSTARTDATE" elementType="Argument">
             <stringProp name="Argument.name">RANDOMSTARTDATE</stringProp>
-            <stringProp name="Argument.value">2022-06-01</stringProp>
+            <stringProp name="Argument.value">2022-07-01</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RANDOMENDDATE" elementType="Argument">
             <stringProp name="Argument.name">RANDOMENDDATE</stringProp>
-            <stringProp name="Argument.value">2022-06-30</stringProp>
+            <stringProp name="Argument.value">2022-07-30</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -192,6 +192,13 @@
             <stringProp name="RegexExtractor.match_number">VALUE NOT FOUND</stringProp>
             <stringProp name="Sample.scope">all</stringProp>
           </RegexExtractor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">GetIdCount</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..Id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TITLE COUNT NOT FOUND</stringProp>
+          </JSONPostProcessor>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Account_Login" enabled="true">
@@ -319,12 +326,12 @@
               </com.blazemeter.jmeter.RandomCSVDataSetConfig>
               <hashTree/>
               <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
-                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.start">364</stringProp>
                 <stringProp name="CounterConfig.end"></stringProp>
                 <stringProp name="CounterConfig.incr">1</stringProp>
                 <stringProp name="CounterConfig.name">Counter_Value</stringProp>
                 <stringProp name="CounterConfig.format"></stringProp>
-                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.per_user">false</boolProp>
               </CounterConfig>
               <hashTree/>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Posts_Dates" enabled="true">

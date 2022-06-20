@@ -37,36 +37,6 @@
             <stringProp name="Argument.value">${__P(Protocol,http)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="VUSERS" elementType="Argument">
-            <stringProp name="Argument.name">VUSERS</stringProp>
-            <stringProp name="Argument.value">${__P(VUsers,1)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="RAMPUP" elementType="Argument">
-            <stringProp name="Argument.name">RAMPUP</stringProp>
-            <stringProp name="Argument.value">${__P(RampUp,10)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="LOOPCOUNT" elementType="Argument">
-            <stringProp name="Argument.name">LOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount, 1)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="DURATION" elementType="Argument">
-            <stringProp name="Argument.name">DURATION</stringProp>
-            <stringProp name="Argument.value">${__P(Duration,10)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="URL" elementType="Argument">
-            <stringProp name="Argument.name">URL</stringProp>
-            <stringProp name="Argument.value">${__P(URL,192.168.0.201)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="PROTOCOL" elementType="Argument">
-            <stringProp name="Argument.name">PROTOCOL</stringProp>
-            <stringProp name="Argument.value">${__P(Protocol,http)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -777,7 +747,7 @@
           <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomDateExtractor" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">RandomDate</stringProp>
-            <stringProp name="RegexExtractor.regex">&quot;\/blog\/(\d+\/\d+\/\d+)</stringProp>
+            <stringProp name="RegexExtractor.regex">&lt;a href=&quot;\/blog\/(.+?)\/default</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
             <stringProp name="RegexExtractor.match_number">0</stringProp>
@@ -886,15 +856,6 @@
                   <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
                 </HtmlExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPagetExtractor" enabled="true">
-                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                  <stringProp name="RegexExtractor.refname">RandomPage</stringProp>
-                  <stringProp name="RegexExtractor.regex">page=(\d{1,2})</stringProp>
-                  <stringProp name="RegexExtractor.template">$1$</stringProp>
-                  <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">0</stringProp>
-                </RegexExtractor>
-                <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Pagination On (50%))" enabled="true">
                 <intProp name="ThroughputController.style">1</intProp>
@@ -944,7 +905,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="false"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1029,7 +990,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763407">Test plan (Task 6)</stringProp>
+                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -1055,7 +1016,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763407">Test plan (Task 6)</stringProp>
+                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -1063,7 +1024,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="false"/>
             <hashTree>
               <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
                 <stringProp name="filename">RandomDates.csv</stringProp>
@@ -1159,7 +1120,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763407">Test plan (Task 6)</stringProp>
+                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -1193,7 +1154,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="false"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1305,7 +1266,7 @@
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="false"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1373,7 +1334,7 @@
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="1616763407">Test plan (Task 6)</stringProp>
+                      <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
                       <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
@@ -1382,7 +1343,7 @@
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="false"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1419,7 +1380,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -1456,7 +1417,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Custom" enabled="true">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Custom" enabled="false">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
@@ -1524,7 +1485,7 @@
         <stringProp name="classname">rocks.nt.apm.jmeter.JMeterInfluxDBBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
-      <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="Console Status Logger" enabled="true"/>
+      <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="Console Status Logger" enabled="false"/>
       <hashTree/>
     </hashTree>
   </hashTree>

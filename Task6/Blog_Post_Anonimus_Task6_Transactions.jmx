@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan(Task 3)" enabled="true">
-      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan(Task 6)" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -267,10 +267,7 @@
               <stringProp name="shareMode">shareMode.all</stringProp>
             </CSVDataSet>
             <hashTree/>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Random Post)" enabled="true">
-              <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">false</boolProp>
-            </TransactionController>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Transaction Controller (Open Random Post)" enabled="true"/>
             <hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_Random_Post" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -371,10 +368,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open First Post)" enabled="true">
-              <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">false</boolProp>
-            </TransactionController>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Transaction Controller (Open First Post)" enabled="true"/>
             <hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_First_Post" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -523,7 +517,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="false">
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1380,7 +1374,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -1417,7 +1411,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Custom" enabled="false">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Custom" enabled="true">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
@@ -1467,7 +1461,7 @@
             </elementProp>
             <elementProp name="samplersList" elementType="Argument">
               <stringProp name="Argument.name">samplersList</stringProp>
-              <stringProp name="Argument.value">Transaction.*</stringProp>
+              <stringProp name="Argument.value">.*</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="useRegexForSamplerList" elementType="Argument">
@@ -1485,7 +1479,7 @@
         <stringProp name="classname">rocks.nt.apm.jmeter.JMeterInfluxDBBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
-      <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="Console Status Logger" enabled="false"/>
+      <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="Console Status Logger" enabled="true"/>
       <hashTree/>
     </hashTree>
   </hashTree>

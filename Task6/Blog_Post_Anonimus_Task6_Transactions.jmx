@@ -360,7 +360,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Last Sample Ok)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1929930607">Simple Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
@@ -461,7 +461,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Last Sample Ok)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1929930607">Simple Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
@@ -865,7 +865,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -891,7 +891,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -899,7 +899,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="true"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -984,7 +984,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -1010,7 +1010,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -1018,7 +1018,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="true"/>
             <hashTree>
               <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
                 <stringProp name="filename">RandomDates.csv</stringProp>
@@ -1114,7 +1114,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -1140,7 +1140,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                    <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                     <stringProp name="170071582">Test Fragment</stringProp>
                     <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -1148,7 +1148,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="true"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1251,7 +1251,7 @@
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                      <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
                       <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
@@ -1260,7 +1260,7 @@
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="true"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -1328,7 +1328,7 @@
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="-1292905376">Test plan(Task 3)</stringProp>
+                      <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
                       <stringProp name="170071582">Test Fragment</stringProp>
                       <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
@@ -1337,7 +1337,7 @@
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="true"/>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>

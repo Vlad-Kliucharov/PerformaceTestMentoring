@@ -775,18 +775,6 @@
             <stringProp name="SwitchController.value">${PERCENTAGEMAINBLOCKS}</stringProp>
           </SwitchController>
           <hashTree>
-            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
-              <stringProp name="delimiter">,</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="filename">DividedTransactionMainBlocks.csv</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
-              <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">true</boolProp>
-              <stringProp name="shareMode">shareMode.all</stringProp>
-              <boolProp name="stopThread">false</boolProp>
-              <stringProp name="variableNames">PERCENTAGEMAINBLOCKS</stringProp>
-            </CSVDataSet>
-            <hashTree/>
             <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="bzm - Random CSV Data Set Config" enabled="true">
               <stringProp name="filename">\DivideValues\DividedTransactionMainBlocks.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -872,22 +860,17 @@
                 </ModuleController>
                 <hashTree/>
               </hashTree>
-              <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (Random OR First (80%))" enabled="true">
-                <stringProp name="SwitchController.value">${PERCENTAGE80}</stringProp>
-              </SwitchController>
+              <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Random OR First (80%))" enabled="true">
+                <intProp name="ThroughputController.style">1</intProp>
+                <boolProp name="ThroughputController.perThread">false</boolProp>
+                <intProp name="ThroughputController.maxThroughput">1</intProp>
+                <FloatProperty>
+                  <name>ThroughputController.percentThroughput</name>
+                  <value>80.0</value>
+                  <savedValue>0.0</savedValue>
+                </FloatProperty>
+              </ThroughputController>
               <hashTree>
-                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                  <stringProp name="delimiter">,</stringProp>
-                  <stringProp name="fileEncoding">UTF-8</stringProp>
-                  <stringProp name="filename">\DivideValues\DividedTransaction(80%).csv</stringProp>
-                  <boolProp name="ignoreFirstLine">false</boolProp>
-                  <boolProp name="quotedData">false</boolProp>
-                  <boolProp name="recycle">true</boolProp>
-                  <stringProp name="shareMode">shareMode.all</stringProp>
-                  <boolProp name="stopThread">false</boolProp>
-                  <stringProp name="variableNames">PERCENTAGE80</stringProp>
-                </CSVDataSet>
-                <hashTree/>
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
@@ -991,23 +974,18 @@
                 </ModuleController>
                 <hashTree/>
               </hashTree>
-              <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (Random OR First (80%))" enabled="true">
-                <stringProp name="SwitchController.value">${PERCENTAGE80}</stringProp>
-              </SwitchController>
+              <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Random OR First (80%))" enabled="true">
+                <intProp name="ThroughputController.style">1</intProp>
+                <boolProp name="ThroughputController.perThread">false</boolProp>
+                <intProp name="ThroughputController.maxThroughput">1</intProp>
+                <FloatProperty>
+                  <name>ThroughputController.percentThroughput</name>
+                  <value>80.0</value>
+                  <savedValue>0.0</savedValue>
+                </FloatProperty>
+              </ThroughputController>
               <hashTree>
-                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                  <stringProp name="delimiter">,</stringProp>
-                  <stringProp name="fileEncoding">UTF-8</stringProp>
-                  <stringProp name="filename">\DivideValues\DividedTransaction(80%).csv</stringProp>
-                  <boolProp name="ignoreFirstLine">false</boolProp>
-                  <boolProp name="quotedData">false</boolProp>
-                  <boolProp name="recycle">true</boolProp>
-                  <stringProp name="shareMode">shareMode.all</stringProp>
-                  <boolProp name="stopThread">false</boolProp>
-                  <stringProp name="variableNames">PERCENTAGE80</stringProp>
-                </CSVDataSet>
-                <hashTree/>
-                <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
+                <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
@@ -1121,23 +1099,18 @@
                 </ModuleController>
                 <hashTree/>
               </hashTree>
-              <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (Random OR First (80%))" enabled="true">
-                <stringProp name="SwitchController.value">${PERCENTAGE80}</stringProp>
-              </SwitchController>
+              <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Random OR First (80%))" enabled="true">
+                <intProp name="ThroughputController.style">1</intProp>
+                <boolProp name="ThroughputController.perThread">false</boolProp>
+                <intProp name="ThroughputController.maxThroughput">1</intProp>
+                <FloatProperty>
+                  <name>ThroughputController.percentThroughput</name>
+                  <value>80.0</value>
+                  <savedValue>0.0</savedValue>
+                </FloatProperty>
+              </ThroughputController>
               <hashTree>
-                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                  <stringProp name="delimiter">,</stringProp>
-                  <stringProp name="fileEncoding">UTF-8</stringProp>
-                  <stringProp name="filename">\DivideValues\DividedTransaction(80%).csv</stringProp>
-                  <boolProp name="ignoreFirstLine">false</boolProp>
-                  <boolProp name="quotedData">false</boolProp>
-                  <boolProp name="recycle">true</boolProp>
-                  <stringProp name="shareMode">shareMode.all</stringProp>
-                  <boolProp name="stopThread">false</boolProp>
-                  <stringProp name="variableNames">PERCENTAGE80</stringProp>
-                </CSVDataSet>
-                <hashTree/>
-                <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
+                <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
@@ -1232,23 +1205,18 @@
                 <boolProp name="IfController.useExpression">true</boolProp>
               </IfController>
               <hashTree>
-                <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (Open Post (Random OR First)(80%))" enabled="true">
-                  <stringProp name="SwitchController.value">${PERCENTAGE80}</stringProp>
-                </SwitchController>
+                <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Random OR First (80%))" enabled="true">
+                  <intProp name="ThroughputController.style">1</intProp>
+                  <boolProp name="ThroughputController.perThread">false</boolProp>
+                  <intProp name="ThroughputController.maxThroughput">1</intProp>
+                  <FloatProperty>
+                    <name>ThroughputController.percentThroughput</name>
+                    <value>80.0</value>
+                    <savedValue>0.0</savedValue>
+                  </FloatProperty>
+                </ThroughputController>
                 <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="delimiter">,</stringProp>
-                    <stringProp name="fileEncoding">UTF-8</stringProp>
-                    <stringProp name="filename">\DivideValues\DividedTransaction(80%).csv</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <boolProp name="quotedData">false</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <stringProp name="shareMode">shareMode.all</stringProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="variableNames">PERCENTAGE80</stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
+                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="-1292905283">Test plan(Task 6)</stringProp>
@@ -1309,23 +1277,18 @@
                 <boolProp name="IfController.useExpression">true</boolProp>
               </IfController>
               <hashTree>
-                <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (Open Post(Random OR First)(80%))" enabled="true">
-                  <stringProp name="SwitchController.value">${PERCENTAGE80}</stringProp>
-                </SwitchController>
+                <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Random OR First (80%))" enabled="true">
+                  <intProp name="ThroughputController.style">1</intProp>
+                  <boolProp name="ThroughputController.perThread">false</boolProp>
+                  <intProp name="ThroughputController.maxThroughput">1</intProp>
+                  <FloatProperty>
+                    <name>ThroughputController.percentThroughput</name>
+                    <value>80.0</value>
+                    <savedValue>0.0</savedValue>
+                  </FloatProperty>
+                </ThroughputController>
                 <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="delimiter">,</stringProp>
-                    <stringProp name="fileEncoding">UTF-8</stringProp>
-                    <stringProp name="filename">\DivideValues\DividedTransaction(80%).csv</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <boolProp name="quotedData">false</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <stringProp name="shareMode">shareMode.all</stringProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="variableNames">PERCENTAGE80</stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First)" enabled="true">
+                  <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="-1292905283">Test plan(Task 6)</stringProp>

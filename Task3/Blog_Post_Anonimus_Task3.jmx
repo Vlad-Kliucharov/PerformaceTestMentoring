@@ -635,7 +635,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">120</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </SetupThreadGroup>
       <hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Warm UP)" enabled="true">
@@ -1552,7 +1552,7 @@
             </elementProp>
             <elementProp name="samplersList" elementType="Argument">
               <stringProp name="Argument.name">samplersList</stringProp>
-              <stringProp name="Argument.value">Transaction.*</stringProp>
+              <stringProp name="Argument.value">.*</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="useRegexForSamplerList" elementType="Argument">

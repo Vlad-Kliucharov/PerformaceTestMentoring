@@ -7,24 +7,44 @@
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="VUSERS" elementType="Argument">
-            <stringProp name="Argument.name">VUSERS</stringProp>
-            <stringProp name="Argument.value">${__P(VUsers,1)}</stringProp>
+          <elementProp name="VUSERSADMIN" elementType="Argument">
+            <stringProp name="Argument.name">VUSERSADMIN</stringProp>
+            <stringProp name="Argument.value">${__P(VUSERSADMIN,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="RAMPUP" elementType="Argument">
-            <stringProp name="Argument.name">RAMPUP</stringProp>
-            <stringProp name="Argument.value">${__P(RampUp,50)}</stringProp>
+          <elementProp name="RAMPUPADMIN" elementType="Argument">
+            <stringProp name="Argument.name">RAMPUPADMIN</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPADMIN,50)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="VUSERSEDITORS" elementType="Argument">
+            <stringProp name="Argument.name">VUSERSEDITORS</stringProp>
+            <stringProp name="Argument.value">${__P(VUSERSEDITORS,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMPUPEDITORS" elementType="Argument">
+            <stringProp name="Argument.name">RAMPUPEDITORS</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPEDITORS,50)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="VUSERSANONIMUS" elementType="Argument">
+            <stringProp name="Argument.name">VUSERSANONIMUS</stringProp>
+            <stringProp name="Argument.value">${__P(VUSERSANONIMUS,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMPUPANONIMUS" elementType="Argument">
+            <stringProp name="Argument.name">RAMPUPANONIMUS</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPANONIMUS,50)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LOOPCOUNT" elementType="Argument">
             <stringProp name="Argument.name">LOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount, 1)}</stringProp>
+            <stringProp name="Argument.value">${__P(LOOPCOUNT, 1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="DURATION" elementType="Argument">
-            <stringProp name="Argument.name">DURATION</stringProp>
-            <stringProp name="Argument.value">${__P(Duration,120)}</stringProp>
+          <elementProp name="DURATIONTIME" elementType="Argument">
+            <stringProp name="Argument.name">DURATIONTIME</stringProp>
+            <stringProp name="Argument.value">${__P(DURATIONTIME,120)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="URL" elementType="Argument">
@@ -74,21 +94,6 @@
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="LOOPCOUNTLOGIN" elementType="Argument">
-            <stringProp name="Argument.name">LOOPCOUNTLOGIN</stringProp>
-            <stringProp name="Argument.value">10</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="PREDEFINEDATELOOP" elementType="Argument">
-            <stringProp name="Argument.name">PREDEFINEDATELOOP</stringProp>
-            <stringProp name="Argument.value">50</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="ANONIMUSLOOPCOUNT" elementType="Argument">
-            <stringProp name="Argument.name">ANONIMUSLOOPCOUNT</stringProp>
-            <stringProp name="Argument.value">50</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="CONSTANTDELAY" elementType="Argument">
             <stringProp name="Argument.name">CONSTANTDELAY</stringProp>
             <stringProp name="Argument.value">3000</stringProp>
@@ -1489,8 +1494,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">2</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">200</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${VUSERSADMIN}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMPUPADMIN}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -1498,6 +1503,16 @@
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LOOPCOUNTLOGIN" elementType="Argument">
+              <stringProp name="Argument.name">LOOPCOUNTLOGIN</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config(Credentials)" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -2151,8 +2166,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">100</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${VUSERSEDITORS}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMPUPEDITORS}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -2160,6 +2175,16 @@
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="PREDEFINEDATELOOP" elementType="Argument">
+              <stringProp name="Argument.name">PREDEFINEDATELOOP</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config(Credentials)" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -3153,8 +3178,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">35</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">350</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${VUSERSANONIMUS}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMPUPANONIMUS}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -3162,6 +3187,16 @@
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="ANONIMUSLOOPCOUNT" elementType="Argument">
+              <stringProp name="Argument.name">ANONIMUSLOOPCOUNT</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>

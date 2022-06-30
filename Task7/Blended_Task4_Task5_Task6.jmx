@@ -137,7 +137,7 @@
       <hashTree/>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment (Admin Thread)" enabled="true"/>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Delete User)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Delete User)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -368,7 +368,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Add User)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Add User)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -502,7 +502,10 @@
       </hashTree>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment (Anonymous Theread)" enabled="true"/>
       <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller (Last Sample Ok)" enabled="true"/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Last Sample Ok)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Add_Comment_To_Post" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -629,7 +632,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller (Open Post Random OR First)" enabled="true"/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Post Random OR First)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller (65%)" enabled="true">
             <stringProp name="SwitchController.value">${PERCENTAGE65}</stringProp>
@@ -742,7 +748,7 @@
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                    <stringProp name="1929930607">Simple Controller (Last Sample Ok)</stringProp>
+                    <stringProp name="1488611931">Transaction Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
@@ -843,7 +849,7 @@
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                    <stringProp name="1929930607">Simple Controller (Last Sample Ok)</stringProp>
+                    <stringProp name="1488611931">Transaction Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
@@ -923,7 +929,7 @@
           <stringProp name="variableNames">Email,Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Pages (Warm UP))" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Anonimus (Warm UP))" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -1017,7 +1023,7 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Login (Warm UP))" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Admin (Warm UP))" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -1497,7 +1503,7 @@
         <stringProp name="ThreadGroup.num_threads">${VUSERSADMIN}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${RAMPUPADMIN}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
+        <stringProp name="ThreadGroup.duration">${DURATIONTIME}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
@@ -1525,7 +1531,7 @@
           <stringProp name="variableNames">Email,Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Home Page)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Home Page)" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -1576,7 +1582,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Login)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Login)" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -1749,7 +1755,7 @@
           <stringProp name="LoopController.loops">${LOOPCOUNTLOGIN}</stringProp>
         </LoopController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Admin Page)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Admin Page)" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -1829,7 +1835,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Profile Page)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Profile Page)" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -1920,7 +1926,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open User Page)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open User Page)" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -2074,7 +2080,7 @@
                 <stringProp name="764597751">Test Plan</stringProp>
                 <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                 <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
-                <stringProp name="251293007">Transaction (Delete User)</stringProp>
+                <stringProp name="607433967">Transaction Controller (Delete User)</stringProp>
               </collectionProp>
             </ModuleController>
             <hashTree/>
@@ -2090,7 +2096,7 @@
                 <stringProp name="764597751">Test Plan</stringProp>
                 <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                 <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
-                <stringProp name="-130968391">Transaction (Add User)</stringProp>
+                <stringProp name="-1438289639">Transaction Controller (Add User)</stringProp>
               </collectionProp>
             </ModuleController>
             <hashTree/>
@@ -2110,7 +2116,7 @@
                   <stringProp name="764597751">Test Plan</stringProp>
                   <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                   <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
-                  <stringProp name="251293007">Transaction (Delete User)</stringProp>
+                  <stringProp name="607433967">Transaction Controller (Delete User)</stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
@@ -2119,7 +2125,7 @@
                   <stringProp name="764597751">Test Plan</stringProp>
                   <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                   <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
-                  <stringProp name="-130968391">Transaction (Add User)</stringProp>
+                  <stringProp name="-1438289639">Transaction Controller (Add User)</stringProp>
                 </collectionProp>
               </ModuleController>
               <hashTree/>
@@ -2169,7 +2175,7 @@
         <stringProp name="ThreadGroup.num_threads">${VUSERSEDITORS}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${RAMPUPEDITORS}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
+        <stringProp name="ThreadGroup.duration">${DURATIONTIME}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
@@ -2197,7 +2203,7 @@
           <stringProp name="variableNames">Email,Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Home Page)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Home Page)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -2265,7 +2271,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Login)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Login)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -2438,7 +2444,7 @@
           <stringProp name="LoopController.loops">${PREDEFINEDATELOOP}</stringProp>
         </LoopController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Date)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Date)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -2507,7 +2513,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Open Post)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Post)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -2567,7 +2573,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Edit Post)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Edit Post)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -2879,7 +2885,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Save Post)" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Save Post)" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -3096,7 +3102,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction (Logout)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Logout)" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -3181,7 +3187,7 @@
         <stringProp name="ThreadGroup.num_threads">${VUSERSANONIMUS}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${RAMPUPANONIMUS}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${DURATION}</stringProp>
+        <stringProp name="ThreadGroup.duration">${DURATIONTIME}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
@@ -3197,73 +3203,79 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">0</stringProp>
-        </TestAction>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Home Page)" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
-          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
-            <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
-          </GaussianRandomTimer>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_HomePage" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">blog/</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPagetExtractor" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">RandomPage</stringProp>
-            <stringProp name="RegexExtractor.regex">page=(\d{1,2})</stringProp>
-            <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default">RANDOM PAGE NOT FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">0</stringProp>
-          </RegexExtractor>
-          <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomDateExtractor" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">RandomDate</stringProp>
-            <stringProp name="RegexExtractor.regex">&lt;a href=&quot;\/blog\/(.+?)\/default</stringProp>
-            <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default">RANDOM DATE NOT FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">0</stringProp>
-          </RegexExtractor>
-          <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-            <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
-            <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">0</stringProp>
-          </RegexExtractor>
-          <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-            <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
-            <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">1</stringProp>
-          </RegexExtractor>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${CONSTANTDELAY}</stringProp>
+              <stringProp name="RandomTimer.range">${DEVIATION}</stringProp>
+            </GaussianRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_Open_HomePage" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">blog/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPagetExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">RandomPage</stringProp>
+              <stringProp name="RegexExtractor.regex">page=(\d{1,2})</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">RANDOM PAGE NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomDateExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">RandomDate</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;a href=&quot;\/blog\/(.+?)\/default</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">RANDOM DATE NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
+              <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Anonymous Script (Loop Controller)" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -3285,7 +3297,10 @@
               <boolProp name="independentListPerThread">false</boolProp>
             </com.blazemeter.jmeter.RandomCSVDataSetConfig>
             <hashTree/>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Home Page Anonymous" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Home Page Anonymous)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -3375,13 +3390,16 @@
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                    <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
+                    <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open RandomDate" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open RandomDate)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -3489,13 +3507,16 @@
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                    <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
+                    <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open PredefineDate" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open PredefineDate)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="Random CSV Data Set Config" enabled="true">
                 <stringProp name="filename">RandomDates.csv</stringProp>
@@ -3614,13 +3635,16 @@
                     <stringProp name="764597751">Test Plan</stringProp>
                     <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                    <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
+                    <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
                 </ModuleController>
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Search By Name" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Search By Name)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -3720,14 +3744,17 @@
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                       <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                      <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
+                      <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Large Calendar" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Large Calendar)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -3905,14 +3932,17 @@
                       <stringProp name="764597751">Test Plan</stringProp>
                       <stringProp name="1616763438">Test plan (Task 7)</stringProp>
                       <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
-                      <stringProp name="1867543925">Simple Controller (Open Post Random OR First)</stringProp>
+                      <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
                   </ModuleController>
                   <hashTree/>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Open Contacts" enabled="true"/>
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller (Open Contacts)" enabled="true">
+              <boolProp name="TransactionController.includeTimers">false</boolProp>
+              <boolProp name="TransactionController.parent">true</boolProp>
+            </TransactionController>
             <hashTree>
               <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
@@ -3986,7 +4016,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Client" enabled="true">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Client" enabled="false">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
@@ -4052,6 +4082,59 @@
           </collectionProp>
         </elementProp>
         <stringProp name="classname">rocks.nt.apm.jmeter.JMeterInfluxDBBackendListenerClient</stringProp>
+      </BackendListener>
+      <hashTree/>
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+        <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="influxdbMetricsSender" elementType="Argument">
+              <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
+              <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="influxdbUrl" elementType="Argument">
+              <stringProp name="Argument.name">influxdbUrl</stringProp>
+              <stringProp name="Argument.value">http://192.168.56.1:8086/write?db=jmeterdb</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="application" elementType="Argument">
+              <stringProp name="Argument.name">application</stringProp>
+              <stringProp name="Argument.value">Blog_Task_7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="measurement" elementType="Argument">
+              <stringProp name="Argument.name">measurement</stringProp>
+              <stringProp name="Argument.value">jmeter</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="summaryOnly" elementType="Argument">
+              <stringProp name="Argument.name">summaryOnly</stringProp>
+              <stringProp name="Argument.value">true</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="samplersRegex" elementType="Argument">
+              <stringProp name="Argument.name">samplersRegex</stringProp>
+              <stringProp name="Argument.value">.*</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="percentiles" elementType="Argument">
+              <stringProp name="Argument.name">percentiles</stringProp>
+              <stringProp name="Argument.value">90;95;99</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="testTitle" elementType="Argument">
+              <stringProp name="Argument.name">testTitle</stringProp>
+              <stringProp name="Argument.value">Test name</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="eventTags" elementType="Argument">
+              <stringProp name="Argument.name">eventTags</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </elementProp>
+        <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
       <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="jp@gc - Console Status Logger" enabled="true"/>

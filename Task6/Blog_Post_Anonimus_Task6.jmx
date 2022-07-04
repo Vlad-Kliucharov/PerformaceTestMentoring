@@ -1297,10 +1297,10 @@
                   <stringProp name="RegexExtractor.regex">ctl00\$cphBody\$calendar&apos;,&apos;(.+?)&apos;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="PostListExtractor" enabled="true">
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="PostListExtractor" enabled="false">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">PostList</stringProp>
                   <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
@@ -1309,7 +1309,7 @@
                   <stringProp name="RegexExtractor.match_number">-1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="false">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
                   <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
@@ -1319,7 +1319,7 @@
                 </RegexExtractor>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_blog/calendar/default.aspx" enabled="false">
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_blog/calendar/default.aspx" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments">
                     <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
@@ -1389,7 +1389,7 @@
                   <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">POST LIST NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">-1</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">

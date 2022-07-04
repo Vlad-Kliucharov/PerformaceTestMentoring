@@ -3823,7 +3823,7 @@
                   <stringProp name="RegexExtractor.regex">ctl00\$cphBody\$calendar&apos;,&apos;(.+?)&apos;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">VALUE NOT FOUND</stringProp>
-                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
               </hashTree>

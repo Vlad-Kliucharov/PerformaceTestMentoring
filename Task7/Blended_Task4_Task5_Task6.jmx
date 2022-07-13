@@ -14,7 +14,7 @@
           </elementProp>
           <elementProp name="RAMPUPADMIN" elementType="Argument">
             <stringProp name="Argument.name">RAMPUPADMIN</stringProp>
-            <stringProp name="Argument.value">${__P(RAMPUPADMIN,50)}</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPADMIN,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="VUSERSEDITORS" elementType="Argument">
@@ -24,7 +24,7 @@
           </elementProp>
           <elementProp name="RAMPUPEDITORS" elementType="Argument">
             <stringProp name="Argument.name">RAMPUPEDITORS</stringProp>
-            <stringProp name="Argument.value">${__P(RAMPUPEDITORS,50)}</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPEDITORS,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="VUSERSANONIMUS" elementType="Argument">
@@ -34,7 +34,7 @@
           </elementProp>
           <elementProp name="RAMPUPANONIMUS" elementType="Argument">
             <stringProp name="Argument.name">RAMPUPANONIMUS</stringProp>
-            <stringProp name="Argument.value">${__P(RAMPUPANONIMUS,50)}</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUPANONIMUS,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LOOPCOUNT" elementType="Argument">
@@ -120,7 +120,7 @@
         <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-        <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">120000</stringProp>
       </ConfigTestElement>
       <hashTree/>
       <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
@@ -885,7 +885,7 @@
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-              <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
               <stringProp name="RegexExtractor.match_number">0</stringProp>
@@ -894,7 +894,7 @@
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPostExtractor" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-              <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
               <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -3269,7 +3269,7 @@
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-              <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
+              <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
               <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -3351,6 +3351,24 @@
                   <stringProp name="HtmlExtractor.match_number">0</stringProp>
                   <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
                 </HtmlExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPostExtractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
                 <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller (Pagination On (50%))" enabled="true">
@@ -3463,7 +3481,7 @@
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -3579,7 +3597,7 @@
                   <stringProp name="RegexExtractor.match_number">0</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostsExtractor" enabled="true">
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
                   <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
@@ -3591,7 +3609,7 @@
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+)&quot;&gt;\w</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -3664,7 +3682,7 @@
                     <elementProp name="q" elementType="HTTPArgument">
                       <boolProp name="HTTPArgument.always_encode">true</boolProp>
                       <stringProp name="Argument.name">q</stringProp>
-                      <stringProp name="Argument.value">${__RandomString(2,1234,)}</stringProp>
+                      <stringProp name="Argument.value">Post${__RandomString(2,1234,)}</stringProp>
                       <stringProp name="Argument.metadata">=</stringProp>
                       <boolProp name="HTTPArgument.use_equals">true</boolProp>
                     </elementProp>
@@ -3706,16 +3724,16 @@
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.regex">\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">0</stringProp>
                 </RegexExtractor>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirtsPostExtractor" enabled="true">
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.regex">\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">1</stringProp>
@@ -3723,7 +3741,7 @@
                 <hashTree/>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller (Search Value Found)" enabled="true">
-                <stringProp name="IfController.condition">${__groovy(vars.get(&quot;OpenSearchValue&quot;) != &quot;VALUE NOT FOUND&quot;)}</stringProp>
+                <stringProp name="IfController.condition">${__groovy(vars.get(&quot;OpenSearchValue&quot;) != &quot;SEARCH VALUE NOT FOUND&quot;)}</stringProp>
                 <boolProp name="IfController.evaluateAll">false</boolProp>
                 <boolProp name="IfController.useExpression">true</boolProp>
               </IfController>
@@ -3903,10 +3921,19 @@
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RandomPostExtractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">RandomPost</stringProp>
-                  <stringProp name="RegexExtractor.regex">blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">RANDOM POST NOT FOUND</stringProp>
                   <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="FirstPostExtractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">FirstPost</stringProp>
+                  <stringProp name="RegexExtractor.regex">a href=&quot;\/blog\/post\/(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">FIRST POST NOT FOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
                 </RegexExtractor>
                 <hashTree/>
               </hashTree>
@@ -4109,7 +4136,7 @@
             </elementProp>
             <elementProp name="summaryOnly" elementType="Argument">
               <stringProp name="Argument.name">summaryOnly</stringProp>
-              <stringProp name="Argument.value">true</stringProp>
+              <stringProp name="Argument.value">false</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="samplersRegex" elementType="Argument">

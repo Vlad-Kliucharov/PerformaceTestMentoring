@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan (Task 7)" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan (Task 8)" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -746,7 +746,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Last Sample Ok)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="1488611931">Transaction Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
@@ -847,7 +847,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Last Sample Ok)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="1488611931">Transaction Controller (Last Sample Ok)</stringProp>
                   </collectionProp>
@@ -2078,7 +2078,7 @@
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Delete User)  " enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                 <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
                 <stringProp name="607433967">Transaction Controller (Delete User)</stringProp>
               </collectionProp>
@@ -2094,7 +2094,7 @@
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Add User)" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
-                <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                 <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
                 <stringProp name="-1438289639">Transaction Controller (Add User)</stringProp>
               </collectionProp>
@@ -2114,7 +2114,7 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Delete User)  " enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                  <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                   <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
                   <stringProp name="607433967">Transaction Controller (Delete User)</stringProp>
                 </collectionProp>
@@ -2123,7 +2123,7 @@
               <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Add User)" enabled="true">
                 <collectionProp name="ModuleController.node_path">
                   <stringProp name="764597751">Test Plan</stringProp>
-                  <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                  <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                   <stringProp name="1995066984">Test Fragment (Admin Thread)</stringProp>
                   <stringProp name="-1438289639">Transaction Controller (Add User)</stringProp>
                 </collectionProp>
@@ -3385,7 +3385,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -3406,7 +3406,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -3502,7 +3502,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -3523,7 +3523,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -3630,7 +3630,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller (Pagination On (Home Page) " enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-1700525759">If Controller (Pagination On (Home Page) </stringProp>
                   </collectionProp>
@@ -3651,7 +3651,7 @@
                 <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                   <collectionProp name="ModuleController.node_path">
                     <stringProp name="764597751">Test Plan</stringProp>
-                    <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                    <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                     <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                     <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                   </collectionProp>
@@ -3760,7 +3760,7 @@
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                      <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                       <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                       <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
@@ -3957,7 +3957,7 @@
                   <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller Open Post(Random OR First 80%)" enabled="true">
                     <collectionProp name="ModuleController.node_path">
                       <stringProp name="764597751">Test Plan</stringProp>
-                      <stringProp name="1616763438">Test plan (Task 7)</stringProp>
+                      <stringProp name="1616763469">Test plan (Task 8)</stringProp>
                       <stringProp name="-1962812613">Test Fragment (Anonymous Theread)</stringProp>
                       <stringProp name="-512907511">Transaction Controller (Open Post Random OR First)</stringProp>
                     </collectionProp>
@@ -4126,7 +4126,7 @@
             </elementProp>
             <elementProp name="application" elementType="Argument">
               <stringProp name="Argument.name">application</stringProp>
-              <stringProp name="Argument.value">Blog_Task_7</stringProp>
+              <stringProp name="Argument.value">Blog_Task_8</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="measurement" elementType="Argument">

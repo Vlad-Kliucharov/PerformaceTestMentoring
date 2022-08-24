@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan (Task 2)" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test plan(Task 2)" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -133,7 +133,7 @@
       <hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">12</stringProp>
+          <stringProp name="LoopController.loops">11</stringProp>
         </LoopController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -231,7 +231,7 @@
                 <elementProp name="ctl00$MainContent$LoginUser$UserName" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">ctl00$MainContent$LoginUser$UserName</stringProp>
-                  <stringProp name="Argument.value">Admin</stringProp>
+                  <stringProp name="Argument.value">admin</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -291,6 +291,25 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://192.168.1.105/blog/admin/app/security/users/userView.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">blog/admin/app/security/users/userView.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://192.168.0.201/blog/api/users?filter=1+%3D%3D+1&amp;order=UserName&amp;skip=0&amp;take=0" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
               <collectionProp name="Arguments.arguments">
@@ -347,7 +366,7 @@
                 </elementProp>
                 <elementProp name="x-blog-instance" elementType="Header">
                   <stringProp name="Header.name">x-blog-instance</stringProp>
-                  <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
+                  <stringProp name="Header.value">27604F05-86AD-47EF-9E05-950BB762570C</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -380,13 +399,13 @@
                 </elementProp>
                 <elementProp name="x-blog-instance" elementType="Header">
                   <stringProp name="Header.name">x-blog-instance</stringProp>
-                  <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
+                  <stringProp name="Header.value">27604F05-86AD-47EF-9E05-950BB762570C</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://192.168.0.201/blog/api/users(NO DB)" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://192.168.0.201/blog/api/users" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -440,72 +459,7 @@
                 </elementProp>
                 <elementProp name="x-blog-instance" elementType="Header">
                   <stringProp name="Header.name">x-blog-instance</stringProp>
-                  <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-          </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://192.168.1.105/blog/api/users" enabled="true">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&#xd;
-    &quot;UserName&quot;:&quot;${Email}&quot;,&#xd;
-    &quot;Email&quot;:&quot;${Email}@gmail.com&quot;,&#xd;
-    &quot;Password&quot;:&quot;qwertywsx&quot;,&#xd;
-    &quot;roles&quot;:[&#xd;
-       {&#xd;
-          &quot;IsChecked&quot;:false,&#xd;
-          &quot;RoleName&quot;:&quot;administrators&quot;,&#xd;
-          &quot;IsSystemRole&quot;:true&#xd;
-       },&#xd;
-       {&#xd;
-          &quot;IsChecked&quot;:false,&#xd;
-          &quot;RoleName&quot;:&quot;Administrators&quot;,&#xd;
-          &quot;IsSystemRole&quot;:true&#xd;
-       },&#xd;
-       {&#xd;
-          &quot;IsChecked&quot;:true,&#xd;
-          &quot;RoleName&quot;:&quot;Editors&quot;,&#xd;
-          &quot;IsSystemRole&quot;:true&#xd;
-       }&#xd;
-    ]&#xd;
- }</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain"></stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">blog/api/users</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
-                </elementProp>
-                <elementProp name="Content-Type" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                </elementProp>
-                <elementProp name="x-blog-instance" elementType="Header">
-                  <stringProp name="Header.name">x-blog-instance</stringProp>
-                  <stringProp name="Header.value">27604f05-86ad-47ef-9e05-950bb762570c</stringProp>
+                  <stringProp name="Header.value">27604F05-86AD-47EF-9E05-950BB762570C</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -567,7 +521,7 @@
                 </elementProp>
                 <elementProp name="x-blog-instance" elementType="Header">
                   <stringProp name="Header.name">x-blog-instance</stringProp>
-                  <stringProp name="Header.value">96d5b379-7e1d-4dac-a6ba-1e50db561b04</stringProp>
+                  <stringProp name="Header.value">27604F05-86AD-47EF-9E05-950BB762570C</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>

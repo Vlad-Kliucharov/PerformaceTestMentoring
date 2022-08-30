@@ -49,7 +49,7 @@
           </elementProp>
           <elementProp name="URL" elementType="Argument">
             <stringProp name="Argument.name">URL</stringProp>
-            <stringProp name="Argument.value">${__P(URL,192.168.1.105)}</stringProp>
+            <stringProp name="Argument.value">${__P(URL,192.168.1.106)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PROTOCOL" elementType="Argument">
